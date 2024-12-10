@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Aplicación de Gestión de Inventario</title>
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Tablero</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/">Tablero</a></li>
+            <li class="breadcrumb-item active">Productos</li>
+        </ol>
+        <div class="card mb-4">
+            <div class="card-header">Productos</div>
+            <div class="card-body">
+                <div class="card mb-4">
+                    <div class="card-header">Nuevo Producto</div>
+                    <div class="card-body">
+                        <form action="/products/" method="POST" id="product_form">
+                            <label for="product_name" class="col-form-label">Nombre del Producto</label>
+                            <input type="text" name="product_name" id="product_name">
+                            <input id="submitProduct" value="Agregar Producto" class="btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table mr-1"></i>
+                        Tabla de Productos
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            {% if products|length < 1 %}
+                            <h4>No hay productos, agrega uno arriba</h4>
+                            {% else %}
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre del Producto</th>
+                                        <th>Fecha</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Nombre del Producto</th>
+                                        <th>Fecha</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    {% for product in products %}
+                                    <tr>
+                                        <td>{{ product.product_id }}</td>
+                                        <td>{{ product.date_created.date() }}</td>
+                                        <td>
+                                            <a href="/delete-product/{{ product.product_id }}">Eliminar</a>
+                                            <br>
+                                            <a href="/update-product/{{ product.product_id }}">Actualizar</a>  
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
