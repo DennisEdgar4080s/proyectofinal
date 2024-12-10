@@ -1,72 +1,68 @@
-# Flask Inventory Managment project
+# Proyecto de gestión de inventario Flask
 
-## Inventory Management Web Application
+## Aplicación web de gestión de inventario
 
-### The goal is to create a web application using Flask framework to manage inventory of a list of products in respective warehouses. Imagine this application will be used in a shop or a warehouse that needs to keep track of various products and various locations.
+### El objetivo es crear una aplicación web que utilice el marco Flask para gestionar el inventario de una lista de productos en los almacenes respectivos. Imagina que esta aplicación se utilizará en una tienda o un almacén que necesita realizar un seguimiento de varios productos y varias ubicaciones.
 
-## Python, Flask, SQLAlchemy 
+## Python, Flask, SQLAlchemy
 
-## Installation
+## Instalación
 
-First, you need to clone this repo:
+Primero, debes clonar este repositorio:
 
 ```bash
-$ git clone https://github.com/shraite7/flask-inventory-app.git
-```
+$ git clone https://github.com/DennisEdgar4080s/proyectofinal.git
 
-Then change into the `flask-inventory-app` folder:
+Luego, cambia a la carpeta `flask-inventory-app`:
 
 ```bash
 $ cd flask-inventory-app
 ```
 
-Now, we will need to create a virtual environment and install all the dependencies. We have two options available for now.
+Ahora, necesitaremos crear un entorno virtual e instalar todas las dependencias. Tenemos dos opciones disponibles por ahora.
 
-Use Pipenv:
+Utilice Pipenv:
 
 ```bash
 $ pipenv install
 $ pipenv shell
 ```
 
-Or use pip + virtualenv:
+O utilice pip + virtualenv:
 
 ```bash
 $ virtualenv venv
-$ . venv/bin/activate  # on Windows, use "venv\Scripts\activate" instead
+$ . venv/bin/activate # en Windows, utilice "venv\Scripts\activate" en su lugar
 $ pip install -r requirements.txt
 ```
-## How to Run the Application?
+## ¿Cómo ejecutar la aplicación?
 
-**Before run the application, make sure you have activated the virtual enviroment:**
+**Antes de ejecutar la aplicación, asegúrese de haber activado el entorno virtual:**
 
 ```bash
 $ flask run
 ```
 
-## Screenshots
+## Capturas de pantalla
 
-#### This shows the first part of the dashboard which contains the Products and Locations sections
+#### Esto muestra la primera parte del panel que contiene las secciones Productos y Ubicaciones
 
-![screenshot for project](screenshots/scs1.png "This shows the first part of the dashboard which contains the Products and Locations sections")
+![captura de pantalla del proyecto](screenshots/scs1.png "Esto muestra la primera parte del panel que contiene las secciones Productos y Ubicaciones")
 
+#### Esto muestra la segunda parte del panel mientras puede agregar y mostrar ubicaciones
 
-#### This shows the second part of the dashboard while you can add and display locations
+![captura de pantalla del proyecto](screenshots/scs2.png "Esto muestra la segunda parte del panel mientras puede agregar y mostrar ubicaciones")
 
-![screenshot for project](screenshots/scs2.png "This shows the second part of the dashboard while you can add and display locations")
+#### Esto muestra la sección Movimientos que agrega movimientos y muestra todos los movimientos registrados
 
+### También muestra la navegación de la página actual
 
-#### This shows the Movements section which add movements and display all recorded movements 
+![captura de pantalla del proyecto](screenshots/scs3.png "Esto muestra la sección Movimientos que agrega movimientos y muestra todos los movimientos registrados")
 
-### It also show the navigation of the current page
+#### a Vista previa de los registros de Movimientos
 
-![screenshot for project](screenshots/scs3.png "This shows the Movements section which add movements and display all recorded movements")
+![captura de pantalla del proyecto](screenshots/scs4.png "Vista previa de los registros de Movimientos")
 
-#### a Preview of the Movements records
+### La última muestra la página de Informe de saldo de productos, que muestra la cantidad total de cada producto en cada ubicación (almacén)
 
-![screenshot for project](screenshots/scs4.png "a Preview of the Movements records")
-
-
-### The last one shows the Product Balance Report page, which dispaly the total quantity of each product in each Location (warehouse)
-
-![screenshot for project](screenshots/scs5.png "The last one shows the Product Balance Report page, which dispaly the total quantity of each product in each Location (warehouse)")
+![captura de pantalla del proyecto](screenshots/scs5.png "La última muestra la página de Informe de saldo de productos, que muestra la cantidad total de cada producto en cada ubicación (almacén)")
